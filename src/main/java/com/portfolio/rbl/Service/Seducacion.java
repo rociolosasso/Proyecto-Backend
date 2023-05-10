@@ -38,9 +38,11 @@ public class Seducacion {
     public boolean existsById(int id){
     return rEducacion.existsById(id);
             }
-
-public boolean existsByNombreE(String nombreE){
-return rEducacion.existByNombreE(nombreE);
+/*
+public boolean existsByNombreEdu(String nombreE){
+return rEducacion.existByNombreEdu(nombreE);
 }
+*/
+
 }
 
