@@ -50,18 +50,18 @@ public class CEducacion {
     return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }
     
-    /*@PostMapping("/create")
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoEducacion dtoedu){      
         if(StringUtils.isBlank(dtoedu.getNombreE()))
           return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        if(sEducacion.existsByNombreEdu(dtoedu.getNombreE()))
+        /*if(sEducacion.existsByNombreEdu(dtoedu.getNombreE()))
             return new ResponseEntity (new Mensaje("Esa educacion ya existe"), HttpStatus.BAD_REQUEST);
-        
+        */
         Educacion educacion = new Educacion(dtoedu.getNombreE(), dtoedu.getDescripcionE());
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion agregada"), HttpStatus.OK);
         }
-    */
+    
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update (@PathVariable("id") int id, @RequestBody dtoEducacion dtoedu){
     //validamos si existe el id
